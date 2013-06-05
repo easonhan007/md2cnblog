@@ -1,9 +1,9 @@
-class CnblogRender < Redcarpet::Render::HTML
+class CnblogRender < ::Redcarpet::Render::HTML
 
   def block_code(code, lang)
     tail = 'gutter:false;'
     class_name = (lang.nil?)? '' : "brush:#{lang};"
-    %W[<pre class="#{class_name}#{tail}">#{code}</pre>]
+    %Q[<pre class="#{class_name}#{tail}">#{code}</pre>]
   end
 
 end #CnblogRender

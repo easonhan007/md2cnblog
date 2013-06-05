@@ -1,9 +1,8 @@
 class IteyeRender < ::Redcarpet::Render::HTML
 
   def block_code(code, lang)
-    class_name = (lang.nil?)? '' : %W[ class="#{lang}" ]
-    %W[<pre name="code" #{class_name}>#{code}</pre>]
-    nil
+    class_name = (lang.nil?)? '' : %Q[ class="#{lang}" ]
+    %Q[<pre name="code" #{class_name}>#{code}</pre>]
   end
 
 end #IteyeRender
