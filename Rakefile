@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "md2cnblog"
   gem.homepage = "http://github.com/easonhan007/md2cnblog"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{An easy way to convert markdown file to cnblogs and itetye html}
+  gem.description = %Q{An command line tool to convert markdown file to cnblogs and itetye html}
   gem.email = "nbkhic@qq.com"
   gem.authors = ["easonhan"]
   # dependencies defined in Gemfile
