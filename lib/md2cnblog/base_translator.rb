@@ -7,7 +7,7 @@ module Md2Cnblog
       @str ||= str if valide_str?(str)
       @options = default_options.merge(options) if valide_option?(options)
       @render = render || default_render
-      @markdown = Redcarpet::Markdown.new(@render)
+      @markdown = ::Redcarpet::Markdown.new(@render, @options)
     end
 
     def valide_str?(str)
@@ -21,7 +21,10 @@ module Md2Cnblog
     end
 
     def default_options
-      { no_intra_emphasis: true, autolink: true, space_after_headers: true }
+      { no_intra_emphasis: true,
+        autolink: true, 
+        space_after_headers: true,
+        fenced_code_blocks: true }
     end
 
     def default_render
@@ -29,8 +32,12 @@ module Md2Cnblog
     end
 
     def start
+      start_mute
+      echo 
+    end
+
+    def start_mute
       @output = @markdown.render(@str)
-      echo
     end
 
     def echo
