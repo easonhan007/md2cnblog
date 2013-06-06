@@ -4,9 +4,9 @@ md2cnblog
 md2cnblog可以轻松的将markdown格式的文本转换成相应blog提供商所支持的html代码，并自动代码高亮之。
 
 安装方法
-  
+```  
   gem install md2cnblog
-
+```
 使用方法
 ```
   mdb mypost.txt -t cnblog > mypost.html
