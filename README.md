@@ -9,8 +9,16 @@ md2cnblog可以轻松的将markdown格式的文本转换成相应blog提供商�
 ```
 使用方法
 ```
-  mdb mypost.txt -t cnblog > mypost.html
+  mdb mypost.txt -t cnblog > mypost.html # 转成博客园支持的html格式
+  mdb mypost.txt -t iteye > mypost.html # 转成iteye和csdn支持的html格式
+  mdb mypost.txt  > mypost.html # 转成标准html
 ```
+目前支持的blog有
+
+* cnblog
+* iteye
+* csdn
+
 Contributing to md2cnblog
 =========================
  

@@ -37,6 +37,8 @@ module Md2Cnblog
   
   o = OptParser.new.do(ARGV) 
   type = o.type || 'base'
+
+  type = 'iteye' if type == 'csdn'
   
   raise 'your should specify a file' if ARGV.empty? 
   file = ARGV.first
